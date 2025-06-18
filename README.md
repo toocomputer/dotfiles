@@ -51,7 +51,7 @@ Contributions are welcome! If you find a bug or have a feature request, please o
 ## License
 
 This repository is open source and available under the [MIT
-License](https://github.com/toocomputer/dotfiles/main/LICENSE.md).
+License](https://github.com/toocomputer/dotfiles?tab=MIT-1-ov-file).
 
 ## Acknowledgements
 
