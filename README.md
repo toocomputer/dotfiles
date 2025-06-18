@@ -14,7 +14,7 @@ Welcome to my dotfiles repository! This repository contains various configuratio
 To use these dotfiles, simply clone the repository:
 
 ```
-git clone https://github.com/your-username/dotfiles.git
+git clone https://github.com/toocomputer/dotfiles.git
 ```
 
 Then, change to the repository directory:
