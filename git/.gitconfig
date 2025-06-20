@@ -1,0 +1,49 @@
+[branch]
+	sort = -committerdate
+
+[column]
+	ui = auto
+
+[core]
+	excludesfile = ~/.gitignore_global
+	editor = vim
+
+[diff]
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+	tool = vscode
+
+[difftool "vscode"]
+	cmd = "code --wait --diff "
+
+[fetch]
+	all = true
+	prune = true
+	pruneTags = true
+
+[includeIf "gitdir:~/projects/launch/"]
+	path = ~/projects/launch/.gitconfig
+
+[init]
+	defaultBranch = main
+
+[merge]
+	tool = vscode
+
+[mergetool "vscode"]
+	cmd = "code --wait "
+	trustExitCode = true
+
+[push]
+	autoSetupRemote = true
+
+[tag]
+	sort = version:refname
+
+[url "https://"]
+	insteadOf = git://
+
+[user]
+	name = toocomputer
+	email = 2061889+toocomputer@users.noreply.github.com

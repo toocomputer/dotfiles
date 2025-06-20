@@ -1,0 +1,52 @@
+# macOS system files
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Icon must be placed here
+Icon?
+
+# Temporary files
+~* 
+*.swp
+*.swo
+
+# Logs
+*.log
+
+# Application specific files
+*.plist
+*.app
+
+# Node.js
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+env/
+venv/
+
+# Ruby
+*.gem
+*.rbc
+/.bundle/
+
+# Java
+*.class
+*.jar
+*.war
+*.ear
+*.class
+
+# Other
+*.tmp
+*.bak
+*.orig
+*.swp
+*.swo
