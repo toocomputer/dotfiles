@@ -27,6 +27,9 @@ export PATH=$PATH:/usr/bin/python3
 # Add Neovim to PATH
 export PATH=$PATH:$HOME/bin/nvim-macos-x86_64/bin
 
+# Add fzf to PATH
+export PATH=$PATH:$HOME/bin/fzf
+
 # Add MongoDB to PATH
 # export PATH=$HOME/mongodb/mongodb-osx-x86_64-3.6.0/bin:$PATH
 
@@ -105,6 +108,8 @@ COMPLETION_WAITING_DOTS="true"
 
 source $ZSH/oh-my-zsh.sh
 
+source  <(fzf --zsh)
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
@@ -125,8 +130,9 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# nvm
 # source ~/dotfiles/.zshrc
+
+# nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
 
