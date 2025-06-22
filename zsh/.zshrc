@@ -1,20 +1,24 @@
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Start with essential system paths and personal bin
+export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOME/bin"
 
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+# Add Ruby gems bin
+export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
 
-# Add personal bin directory to PATH
-export PATH=$PATH:$HOME/bin
+# Add yarn global bin
+export PATH="$(yarn global bin 2>/dev/null):$PATH"
 
-# Add Ruby to PATH
-export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
+# Add fzf
+export PATH="$HOME/bin/fzf:$PATH"
 
-# Add Python3 to PATH
-export PATH=$PATH:/usr/bin/python3
+# Add local node_modules binaries
+export PATH="./node_modules/.bin:$PATH"
+
+# Add git bin directory
+export PATH="/usr/local/git/bin:$PATH"
 
 # Add Neovim to PATH
 # Detect the architecture
-arch=$(uname -m)
+arch=$(/usr/bin/uname -m)
 
 if [[ "$arch" == "x86_64" ]]; then
   export PATH="$HOME/bin/nvim-macos-x86_64/bin:$PATH"
@@ -26,20 +30,11 @@ else
   echo "Warning: Unknown architecture $arch. Neovim path not set."
 fi
 
-# Add fzf to PATH
-export PATH=$PATH:$HOME/bin/fzf
-
 # Add MongoDB to PATH
 # export PATH=$HOME/mongodb/mongodb-osx-x86_64-3.6.0/bin:$PATH
 
-# Add node_modules to PATH
-export PATH=$PATH:./node_modules/.bin
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
-
-# Path to git
-export PATH=/usr/local/git/bin/git:$PATH
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -251,4 +246,3 @@ complete -o nospace -C /usr/local/bin/terraform terraform
 
 # export LS_COLORS='di=0;35:ln=0;35:so=0;32:pi=0;33:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;30;41:sg=0;30;46:tw=0;30;42:ow=0;30;43'
 export LSCOLORS='gxfxcxdxbxegedabagacad'
-
