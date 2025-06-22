@@ -43,7 +43,8 @@
 
 [url "https://"]
 	insteadOf = git://
+[includeIf "gitdir:~/work/"]
+  path = ~/.gitconfig-work
 
-[user]
-	name = toocomputer
-	email = 2061889+toocomputer@users.noreply.github.com
+[includeIf "gitdir:~/personal/"]
+  path = ~/.gitconfig-personal
