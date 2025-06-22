@@ -25,7 +25,17 @@ export PATH=$PATH:$HOME/.gem/ruby/2.6.0/bin
 export PATH=$PATH:/usr/bin/python3
 
 # Add Neovim to PATH
-export PATH=$PATH:$HOME/bin/nvim-macos-x86_64/bin
+# Detect the architecture
+arch=$(uname -m)
+
+if [[ "$arch" == "x86_64" ]]; then
+  export PATH="$HOME/bin/nvim-macos-x86_64/bin:$PATH"
+elif [[ "$arch" == "arm64" ]]; then
+  export PATH="$HOME/bin/nvim-macos-arm64/bin:$PATH"
+else
+  echo "Warning: Unknown architecture $arch. Neovim path not set."
+fi
+
 
 # Add fzf to PATH
 export PATH=$PATH:$HOME/bin/fzf
