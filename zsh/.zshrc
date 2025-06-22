@@ -3,18 +3,6 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH=/usr/local/bin:/usr/local/sbin:$PATH
 
-# Add MAMP PHP to PATH
-export PATH=/Applications/MAMP/bin/php/php7.1.6/bin:$PATH
-
-# Add Apache Ant to PATH
-export PATH=$HOME/apache-ant-1.10.1/bin:$PATH
-
-# Add Composer to PATH
-export PATH=$HOME/.composer/vendor/bin:$PATH
-
-# Add Yarn to PATH
-export PATH="$PATH:yarn global bin"
-
 # Add personal bin directory to PATH
 export PATH=$PATH:$HOME/bin
 
