@@ -30,12 +30,13 @@ arch=$(uname -m)
 
 if [[ "$arch" == "x86_64" ]]; then
   export PATH="$HOME/bin/nvim-macos-x86_64/bin:$PATH"
+  alias v="$HOME/bin/nvim-macos-x86_64/bin/nvim"
 elif [[ "$arch" == "arm64" ]]; then
   export PATH="$HOME/bin/nvim-macos-arm64/bin:$PATH"
+  alias v="$HOME/bin/nvim-macos-arm64/bin/nvim"
 else
   echo "Warning: Unknown architecture $arch. Neovim path not set."
 fi
-
 
 # Add fzf to PATH
 export PATH=$PATH:$HOME/bin/fzf
@@ -186,7 +187,6 @@ alias serve="http-server -o -c-1"
 alias shot="screencapture -x -T 3 ~/Desktop/sc.png"
 alias templates="cd $HOME/Projects/_templates && ls"
 alias tuts="cd $HOME/Projects/tutelage"
-alias v="$HOME/bin/nvim-macos-x86_64/bin/nvim"
 alias vite-dir="npx vite-dir"
 alias vitereact="source vitereact"
 alias vscs="cd $HOME/projects/vscs"
