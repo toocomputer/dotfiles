@@ -1,3 +1,11 @@
+# Detect architecture and source specific config
+if [[ "$(/usr/bin/uname -m)" == "arm64" ]]; then
+  source ~/.zshrc_arm64
+else
+  source ~/.zshrc_intel
+fi
+
+# If you come from bash you might have to change your $PATH.
 # Start with essential system paths and personal bin
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOME/bin"
 
@@ -124,8 +132,6 @@ source  <(fzf --zsh)
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# source ~/dotfiles/.zshrc
-
 # nvm
 export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
@@ -163,7 +169,6 @@ alias ohmyzsh="v ~/.oh-my-zsh"
 alias newvite="npm create vite@latest"
 alias projects="cd $HOME/Projects"
 alias pn=pnpm
-alias python=/usr/local/bin/python3
 alias raycast="cd ~/bin/raycast"
 alias react="cd $HOME/Projects/React"
 alias serve="http-server -o -c-1"

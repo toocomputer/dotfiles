@@ -1,0 +1,8 @@
+# Apple Silicon Homebrew path
+export PATH="/opt/homebrew/bin:$PATH"
+
+# Neovim for arm64
+export PATH="$HOME/bin/nvim-macos-arm64/bin:$PATH"
+alias v="$HOME/bin/nvim-macos-arm64/bin/nvim"
+
+alias python=/usr/bin/python3
