@@ -254,6 +254,3 @@ export LSCOLORS='gxfxcxdxbxegedabagacad'
 
 # Use vi mode
 bindkey -v
-
-# Used in .gitconfig conditional includes
-export GIT_ARCH=$(uname -m)
