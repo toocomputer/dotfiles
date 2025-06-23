@@ -1,8 +1,0 @@
-# Intel Homebrew path
-export PATH="/usr/local/bin:$PATH"
-
-# Neovim for x86_64
-export PATH="$HOME/bin/nvim-macos-x86_64/bin:$PATH"
-alias v="$HOME/bin/nvim-macos-x86_64/bin/nvim"
-
-alias python=/usr/local/bin/python3

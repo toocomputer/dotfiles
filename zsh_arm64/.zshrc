@@ -1,46 +1,3 @@
-# Detect architecture and source specific config
-if [[ "$(/usr/bin/uname -m)" == "arm64" ]]; then
-  source ~/.zshrc_arm64
-else
-  source ~/.zshrc_intel
-fi
-
-# If you come from bash you might have to change your $PATH.
-# Start with essential system paths and personal bin
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOME/bin"
-
-# Add Ruby gems bin
-export PATH="$HOME/.gem/ruby/2.6.0/bin:$PATH"
-
-# Add yarn global bin
-export PATH="$(yarn global bin 2>/dev/null):$PATH"
-
-# Add fzf
-export PATH="$HOME/bin/fzf:$PATH"
-
-# Add local node_modules binaries
-export PATH="./node_modules/.bin:$PATH"
-
-# Add git bin directory
-export PATH="/usr/local/git/bin:$PATH"
-
-# Add Neovim to PATH
-# Detect the architecture
-arch=$(/usr/bin/uname -m)
-
-if [[ "$arch" == "x86_64" ]]; then
-  export PATH="$HOME/bin/nvim-macos-x86_64/bin:$PATH"
-  alias v="$HOME/bin/nvim-macos-x86_64/bin/nvim"
-elif [[ "$arch" == "arm64" ]]; then
-  export PATH="$HOME/bin/nvim-macos-arm64/bin:$PATH"
-  alias v="$HOME/bin/nvim-macos-arm64/bin/nvim"
-else
-  echo "Warning: Unknown architecture $arch. Neovim path not set."
-fi
-
-# Add MongoDB to PATH
-# export PATH=$HOME/mongodb/mongodb-osx-x86_64-3.6.0/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
@@ -148,35 +105,27 @@ alias chistory="echo "" > ~/.zsh_history & exec $SHELL -l"
 alias dd="cd $HOME/Desktop && ls"
 alias decaf="killall caffeinate"
 alias dev="npm run dev"
-alias dl="cd ~/Desktop && youtube-dl"
-alias dl2="cd ~/Desktop && youtube-dl --ignore-config"
 alias dot="cd $HOME/dotfiles"
-alias eject="drutil tray eject"
-alias exp="cd ~/projects/Exp"
 alias globals="npm list -g --depth 0"
 alias gs="git status"
 alias ggpush="git push origin main"
-alias ignore="cp $HOME/dotfiles/.gitignore ."
 alias ilua="v ~/.config/nvim/init.lua"
 alias ip="curl ifconfig.me"
 alias kb="v $HOME/Library/Application\ Support/Code/User/keybindings.json"
 alias launch="cd; ~/projects/launch"
 alias live="live-server"
 alias ll="ls -al"
-alias oh="cd ~/Projects/ohteur/"
 alias omz="omz update"
 alias ohmyzsh="v ~/.oh-my-zsh"
 alias newvite="npm create vite@latest"
 alias projects="cd $HOME/Projects"
 alias pn=pnpm
+alias python=/usr/bin/python3
 alias raycast="cd ~/bin/raycast"
-alias react="cd $HOME/Projects/React"
 alias serve="http-server -o -c-1"
 alias shot="screencapture -x -T 3 ~/Desktop/sc.png"
-alias templates="cd $HOME/Projects/_templates && ls"
-alias tuts="cd $HOME/Projects/tutelage"
+alias v="$HOME/bin/nvim-macos-arm64/bin/nvim"
 alias vite-dir="npx vite-dir"
-alias vitereact="source vitereact"
 alias vscs="cd $HOME/projects/vscs"
 alias zsh="v ~/.zshrc"
 alias zterm="v +term"
@@ -196,16 +145,6 @@ dotfiles() {
   cd ~/dotfiles && git status
 }
 
-eslint () {
-  cp ~/projects/.eslintrc.json .
-  echo "eslint config copied to this directory!"
-}
-
-favicon () {
-  cp ~/projects/favicon.ico .
-  echo "Favicon copied to this directory!"
-}
-
 gcom() {
   if [ -z "$1" ]; then
     echo "Error: Commit message required."
@@ -219,17 +158,6 @@ mkcd () {
   mkdir -p -- "$1" &&
   cd -P -- "$1"
 }
-
-# zsh-completions
-if type brew &>/dev/null; then
-FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-
-autoload -Uz compinit
-compinit
-fi
-# END zsh-completions
-
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 eval "$(starship init zsh)"
@@ -254,3 +182,5 @@ export LSCOLORS='gxfxcxdxbxegedabagacad'
 
 # Use vi mode
 bindkey -v
+
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-arm64/bin:$HOME/bin/nvim-macos-x86_64/bin"
