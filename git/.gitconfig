@@ -44,8 +44,8 @@
 [url "https://"]
 	insteadOf = git://
 
-[includeIf "gitdir:~/magProjects/"]
+[includeIf "env:GIT_ARCH=arm64"]
   path = ~/.gitconfig-work
 
-[includeIf "gitdir:~/projects/"]
+[includeIf "env:GIT_ARCH=x86_64"]
   path = ~/.gitconfig-personal
