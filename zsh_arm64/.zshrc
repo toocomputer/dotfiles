@@ -98,6 +98,7 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias bozo="cd $HOME/projects/bozoworks"
 alias caffeine="caffeinate -t 144000 &"
 alias cdvim="cd $HOME/.config/nvim"
 alias chistory="echo "" > ~/.zsh_history & exec $SHELL -l"
@@ -132,11 +133,6 @@ alias zsh="v ~/.zshrc"
 alias zterm="v +term"
 
 # MISC FUNCTIONS
-bozo() {
-  cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/bozoworks
-  echo "Changed to the 🤡 directory!"
-}
-
 alias cd 2>/dev/null && unalias cd
 cd() {
   builtin cd "$@" && ls
