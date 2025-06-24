@@ -214,4 +214,30 @@ export LSCOLORS='gxfxcxdxbxegedabagacad'
 # Use vi mode
 bindkey -v
 
+# Function to set cursor shape based on mode (non-blinking)
+function zle-keymap-select {
+  if [[ ${KEYMAP} == vicmd ]]; then
+    # Normal mode: steady block cursor (non-blinking)
+    echo -ne '\e[2 q'
+  else
+    # Insert mode: steady beam cursor (non-blinking)
+    echo -ne '\e[6 q'
+  fi
+}
+
+# Function to set cursor shape when command line starts (initially insert mode)
+function zle-line-init {
+  echo -ne '\e[6 q'  # Steady beam cursor for insert mode
+}
+
+# Reset cursor shape on command line finish
+function zle-line-finish {
+  echo -ne '\e[2 q'  # Steady block cursor
+}
+
+# Register widgets
+zle -N zle-keymap-select
+zle -N zle-line-init
+zle -N zle-line-finish
+
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-x86_64/bin:$HOME/bin/nvim-macos-x86_64/bin:/opt/local/bin"
