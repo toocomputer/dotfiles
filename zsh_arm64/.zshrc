@@ -67,7 +67,6 @@ COMPLETION_WAITING_DOTS="true"
 
 source $ZSH/oh-my-zsh.sh
 
-source  <(fzf --zsh)
 
 # User configuration
 
@@ -186,3 +185,5 @@ export LSCOLORS='gxfxcxdxbxegedabagacad'
 bindkey -v
 
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-arm64/bin:$HOME/bin/nvim-macos-x86_64/bin"
+
+source  <(fzf --zsh)
