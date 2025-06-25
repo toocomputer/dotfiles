@@ -18,15 +18,15 @@ $php\
 [ ](fg:#1d2230)\
 $character"""
 
-right_format = """
-[](fg:#1d2230)\
-$battery\
-[](bg:#1d2230 fg:#394260)\
-$time\
-[ ](bg:#414e62)\
-[ ](bg:#5E6A81)\
-[ ](bg:#7B89A6)\
-"""
+# right_format = """
+# [](fg:#1d2230)\
+# $battery\
+# [](bg:#1d2230 fg:#394260)\
+# $time\
+# [ ](bg:#414e62)\
+# [ ](bg:#5E6A81)\
+# [ ](bg:#7B89A6)\
+# """
 
 [directory]
 style = "fg:#e3e5e5 bg:#769ff0"
