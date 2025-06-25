@@ -52,5 +52,8 @@ vim.keymap.set('n', '<leader>q', ':q<CR>')
 -- Quit without saving 
 vim.keymap.set('n', '<leader>qq', ':q!<CR>')
 
+-- Save
+vim.keymap.set('n', '<leader>s', ':w<CR>')
+
 -- Save and quit
 vim.keymap.set('n', '<leader>wq', ':wq<CR>')
