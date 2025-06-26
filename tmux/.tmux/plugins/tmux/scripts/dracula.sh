@@ -30,7 +30,7 @@ main() {
   show_right_sep=$(get_tmux_option "@dracula-show-right-sep" )
   show_edge_icons=$(get_tmux_option "@dracula-show-edge-icons" false)
   show_inverse_divider=$(get_tmux_option "@dracula-inverse-divider" )
-  show_border_contrast=$(get_tmux_option "@dracula-border-contrast" false)
+  show_border_contrast=$(get_tmux_option "@dracula-border-contrast" true)
   show_day_month=$(get_tmux_option "@dracula-day-month" false)
   show_refresh=$(get_tmux_option "@dracula-refresh-rate" 5)
   show_synchronize_panes_label=$(get_tmux_option "@dracula-synchronize-panes-label" "Sync")
