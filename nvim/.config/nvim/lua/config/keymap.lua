@@ -47,13 +47,13 @@ vim.keymap.set('n', '<leader>bp', ':bprevious<CR>', { noremap = true, silent = t
 vim.keymap.set('n', '<leader>bd', ':bd<CR>', { noremap = true, silent = true })
 
 -- Quit Neovim
-vim.keymap.set('n', '<leader>q', ':q<CR>')
+vim.keymap.set('n', '<leader>q', ':qa<CR>')
 
 -- Quit without saving 
-vim.keymap.set('n', '<leader>qq', ':q!<CR>')
+vim.keymap.set('n', '<leader>qq', ':qa!<CR>')
 
 -- Save
-vim.keymap.set('n', '<leader>s', ':w<CR>')
+vim.keymap.set('n', '<leader>w', ':w<CR>')
 
 -- Save and quit
-vim.keymap.set('n', '<leader>wq', ':wq<CR>')
+vim.keymap.set('n', '<leader>wq', ':wqa<CR>')
