@@ -230,3 +230,7 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOM
 
 source  <(fzf --zsh)
 
+# Check if tmux is not already running
+if [ -z "$TMUX" ]; then
+  tmux new-session -s main
+fi
