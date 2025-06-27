@@ -262,3 +262,8 @@ zle -N zle-line-finish
 export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-x86_64/bin:$HOME/bin/nvim-macos-x86_64/bin:/opt/local/bin"
 
 source  <(fzf --zsh)
+
+# Check if tmux is not already running
+if [ -z "$TMUX" ]; then
+  tmux new-session -s main
+fi
