@@ -161,7 +161,7 @@ main() {
   tmux set-option -g pane-border-style "fg=${gray}"
 
   # message styling
-  tmux set-option -g message-style "bg=${gray},fg=${white}"
+  tmux set-option -g message-style "bg=${light_purple},fg=${white}"
 
   # status bar
   tmux set-option -g status-style "bg=${bg_color},fg=${white}"
