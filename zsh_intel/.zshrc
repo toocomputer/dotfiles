@@ -265,5 +265,5 @@ source  <(fzf --zsh)
 
 # Check if tmux is not already running
 if [ -z "$TMUX" ]; then
-  tmux new-session -s main
+  tmux new-session
 fi
