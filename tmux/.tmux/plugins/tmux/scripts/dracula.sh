@@ -154,7 +154,7 @@ main() {
 
   # pane border styling
   if $show_border_contrast; then
-    tmux set-option -g pane-active-border-style "fg=${dark_gray}"
+    tmux set-option -g pane-active-border-style "fg=${red}"
   else
     tmux set-option -g pane-active-border-style "fg=${dark_purple}"
   fi
