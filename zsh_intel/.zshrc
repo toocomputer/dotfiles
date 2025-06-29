@@ -129,6 +129,8 @@ alias dl2="cd ~/Desktop && youtube-dl --ignore-config"
 alias dot="cd $HOME/dotfiles"
 alias eject="drutil tray eject"
 alias exp="cd ~/projects/Exp"
+# https://stackoverflow.com/questions/41963660/how-to-open-a-file-in-a-specific-application-from-fzf#64416946
+alias f='nvim "$(fzf)"'
 alias globals="npm list -g --depth 0"
 alias gs="git status"
 alias ggpush="git push origin main"

@@ -126,6 +126,8 @@ alias dd="cd $HOME/Desktop && ls"
 alias decaf="killall caffeinate"
 alias dev="npm run dev"
 alias dot="cd $HOME/dotfiles"
+# https://stackoverflow.com/questions/41963660/how-to-open-a-file-in-a-specific-application-from-fzf#64416946
+alias f='vim "$(fzf)"'
 alias globals="npm list -g --depth 0"
 alias gs="git status"
 alias ggpush="git push origin main"
