@@ -234,5 +234,11 @@ source  <(fzf --zsh)
 
 # Check if tmux is not already running
 if [ -z "$TMUX" ]; then
-  tmux new-session -s main
+  read "session_name?Enter tmux session name (default: Main): "
+  session_name=${session_name:-Main}
+
+  read "window_name?Enter tmux window name (default: Main): "
+  window_name=${window_name:-Main}
+
+  tmux new-session -s "$session_name" -n "$window_name"
 fi
