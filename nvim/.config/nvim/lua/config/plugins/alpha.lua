@@ -5,6 +5,9 @@ return {
     config = function()
       local alpha = require("alpha")
       local dashboard = require("alpha.themes.dashboard")
+      
+      dashboard.section.header.opts.hl = "Statement"
+      dashboard.section.footer.opts.hl = "Character"
 
       -- Set menu
       dashboard.section.buttons.val = {
@@ -16,14 +19,7 @@ return {
       }
 
       -- Set footer
-      local lazy_stats = require("lazy").stats() -- Get Lazy.nvim stats
-      dashboard.section.footer.val = {
-        "First, solve the problem. Then write the code.",
-        " ",
-        "                                  - John Johnson",
-        " ",
---        "             Plugins loaded: " .. lazy_stats.loaded .. " / " .. lazy_stats.count,
-      }
+      require'alpha.themes.dashboard'.section.footer.val = require'alpha.fortune'()
 
       -- Send config to alpha
       alpha.setup(dashboard.opts)
