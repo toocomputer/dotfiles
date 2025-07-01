@@ -6,6 +6,8 @@ return {
       local alpha = require("alpha")
       local dashboard = require("alpha.themes.dashboard")
       
+      dashboard.opts.layout[1].val = 0
+      
       dashboard.section.header.opts.hl = "Statement"
 
       -- Set menu
