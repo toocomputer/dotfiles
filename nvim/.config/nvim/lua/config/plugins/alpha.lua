@@ -7,7 +7,6 @@ return {
       local dashboard = require("alpha.themes.dashboard")
       
       dashboard.section.header.opts.hl = "Statement"
-      dashboard.section.footer.opts.hl = "Character"
 
       -- Set menu
       dashboard.section.buttons.val = {
@@ -19,6 +18,7 @@ return {
       }
 
       -- Set footer
+      dashboard.section.footer.opts.hl = "Character"
       require'alpha.themes.dashboard'.section.footer.val = require'alpha.fortune'()
 
       -- Send config to alpha
