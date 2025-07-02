@@ -2,7 +2,7 @@ format = """
 [ ](bg:#414e62 fg:#414e62)\
 [ ](bg:#5E6A81 fg:#5E6A81)\
 [ ](bg:#7B89A6 fg:#7B89A6)\
-[ ](bg:#a3aed2 fg:#090c0c)\
+[ 󰖔](bg:#a3aed2 fg:#090c0c)\
 [](bg:#769ff0 #a3aed2)\
 $directory\
 [](fg:#769ff0 bg:#394260)\
