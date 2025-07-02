@@ -186,7 +186,7 @@ favicon () {
   echo "Favicon copied to this directory!"
 }
 
-gcom() {
+gc () {
   if [ -z "$1" ]; then
     echo "Error: Commit message required."
     return 1
