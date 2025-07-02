@@ -21,7 +21,7 @@ return {
 
       -- Set footer
       dashboard.section.footer.opts.hl = "Character"
-      require'alpha.themes.dashboard'.section.footer.val = require'alpha.fortune'()
+      dashboard.section.footer.val = require'customAlpha.fortune'()
 
       -- Send config to alpha
       alpha.setup(dashboard.opts)
