@@ -164,7 +164,7 @@ dotfiles() {
   cd ~/dotfiles && git status
 }
 
-gcom() {
+gc () {
   if [ -z "$1" ]; then
     echo "Error: Commit message required."
     return 1
