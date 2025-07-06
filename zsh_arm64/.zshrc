@@ -147,6 +147,7 @@ alias pn=pnpm
 alias python=/usr/bin/python3
 alias raycast="cd ~/bin/raycast"
 alias serve="http-server -o -c-1"
+alias sz="source ~/.zshrc"
 alias shot="screencapture -x -T 3 ~/Desktop/sc.png"
 alias v="$HOME/bin/nvim-macos-arm64/bin/nvim"
 alias vite-dir="npx vite-dir"
