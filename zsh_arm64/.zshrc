@@ -245,3 +245,5 @@ if [ -z "$TMUX" ]; then
 
   tmux new-session -s "$session_name" -n "$window_name"
 fi
+
+XDG_CONFIG_HOME=$HOME/.config
