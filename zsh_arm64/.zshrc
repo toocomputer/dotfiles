@@ -147,6 +147,7 @@ alias pn=pnpm
 alias python=/usr/bin/python3
 alias raycast="cd ~/bin/raycast"
 alias serve="http-server -o -c-1"
+alias sz="source ~/.zshrc"
 alias shot="screencapture -x -T 3 ~/Desktop/sc.png"
 alias v="$HOME/bin/nvim-macos-arm64/bin/nvim"
 alias vite-dir="npx vite-dir"
@@ -228,7 +229,9 @@ zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N zle-line-finish
 
-export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-arm64/bin:$HOME/bin/nvim-macos-x86_64/bin"
+export GOPATH=$HOME/go
+
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-arm64/bin:$HOME/bin/nvim-macos-x86_64/bin:/usr/local/go/bin:$GOPATH/bin"
 
 source  <(fzf --zsh)
 
