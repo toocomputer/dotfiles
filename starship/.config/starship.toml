@@ -94,4 +94,4 @@ style = 'fg:#7b89a6 bg:#1d2230'
 
 [character]
 success_symbol = '[➜](green)'
-error_symbol = '[](red)'
+error_symbol = '[✗](red)'
