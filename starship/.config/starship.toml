@@ -35,10 +35,11 @@ truncation_length = 3
 truncation_symbol = "…/"
 
 [directory.substitutions]
-"Documents" = " "
-"Downloads" = " "
-"Music" = " "
-"Pictures" = " "
+"Documents" = "Documents  "
+"Downloads" = "Downloads  "
+"Music" = "Music  "
+"Pictures" = "Pictures  "
+"Projects" = "Projects  "
 
 [git_branch]
 symbol = ""
@@ -90,3 +91,7 @@ format = '[$symbol $percentage ]($style)'
 [[battery.display]]
 threshold = 100
 style = 'fg:#7b89a6 bg:#1d2230'
+
+[character]
+success_symbol = '[➜](green)'
+error_symbol = '[](red)'
