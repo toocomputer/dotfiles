@@ -26,7 +26,7 @@ return {
         }
       })
 
-      vim.keymap.set('n', '<leader>t', ':Neotree filesystem toggle reveal right<CR>', { silent = true })
+      vim.keymap.set('n', '<leader>t', ':Neotree filesystem toggle reveal float<CR>', { silent = true })
     end,
   },
 }
