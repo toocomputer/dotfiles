@@ -87,31 +87,6 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 # export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-# NVM
-export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
-
-autoload -U add-zsh-hook
-
-load-nvmrc() {
-  local node_version="$(nvm current)"
-  local nvmrc_path="$(nvm_find_nvmrc)"  # Finds nearest .nvmrc up the directory tree
-
-  if [ -n "$nvmrc_path" ]; then
-    local nvmrc_node_version=$(cat "$nvmrc_path")
-
-    if [ "$nvmrc_node_version" != "$node_version" ]; then
-      nvm use --silent "$nvmrc_node_version"
-    fi
-  elif [ "$node_version" != "none" ]; then
-    nvm use --silent default
-  fi
-}
-
-add-zsh-hook chpwd load-nvmrc  # Run load-nvmrc on every directory change
-load-nvmrc  # Run once for the current directory on shell startup
-
-
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
@@ -211,8 +186,6 @@ autoload -Uz compinit
 compinit
 fi
 # END zsh-completions
-
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 eval "$(starship init zsh)"
