@@ -166,10 +166,10 @@ favicon () {
 
 gc () {
   if [ -z "$1" ]; then
-    echo "Error: Commit message required."
-    return 1
+    git commit
+  else
+    git commit -m "$*"
   fi
-  git commit -m "$*"
 }
 
 # https://unix.stackexchange.com/questions/125385/combined-mkdir-and-cd
