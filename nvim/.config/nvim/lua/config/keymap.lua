@@ -54,3 +54,6 @@ vim.keymap.set('n', '<leader>w', ':w<CR>')
 
 -- Save and quit
 vim.keymap.set('n', '<leader>wq', ':wqa<CR>')
+
+-- Recent files
+vim.keymap.set('n', 'leader>r', ':Telescope oldfiles')
