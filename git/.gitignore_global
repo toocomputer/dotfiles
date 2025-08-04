@@ -51,3 +51,5 @@ venv/
 *.swp
 *.swo
 *.nvmrc
+*.yarn/
+*.yarnrc.yml
