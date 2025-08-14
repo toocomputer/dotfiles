@@ -35,3 +35,21 @@ vim.opt.linebreak = true
 vim.cmd(":cd %:p:h")
 
 vim.g.netrw_banner = 0 -- Hide the Netrw banner on top
+
+-- Enable folding
+vim.opt.foldenable = true
+
+-- Use marker-based folding and set default markers
+vim.opt.foldmethod = 'indent'
+
+-- Optionally, open all folds on startup
+vim.opt.foldlevelstart = 99
+
+-- Disable the default fold filler:
+vim.opt.fillchars = { fold = " " }
+
+function _G.my_foldtext()
+  return " ... "
+end
+
+vim.opt.foldtext = "v:lua.my_foldtext()"
