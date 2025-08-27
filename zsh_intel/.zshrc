@@ -239,7 +239,7 @@ zle -N zle-line-finish
 
 VOLTA_HOME=$HOME/.volta
 
-export PATH="$VOLTA_HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-arm64/bin:$HOME/bin"
+export PATH="$VOLTA_HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-x86_64/bin:/opt/local/bin"
 
 source  <(fzf --zsh)
 
