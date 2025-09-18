@@ -40,3 +40,5 @@ export PATH=$HOME/mongodb/mongodb-osx-x86_64-3.6.0/bin:$PATH
 [ -s "$HOME.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
 complete -C /usr/local/bin/terraform terraform
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
