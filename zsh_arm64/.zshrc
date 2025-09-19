@@ -1,4 +1,4 @@
-# Path to your oh-my-zsh installation.
+#Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -116,6 +116,7 @@ alias live="live-server"
 alias ll="ls -al"
 alias lt="eza -T -a --icons --color"
 alias ltl="eza -l -T -a --icons --color"
+alias ls="eza --all --group-directories-first --icons"
 alias mymag="cd $HOME/projects/myMag"
 alias omz="omz update"
 alias ohmyzsh="v ~/.oh-my-zsh"
@@ -175,8 +176,8 @@ esac
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-# export LS_COLORS='di=0;35:ln=0;35:so=0;32:pi=0;33:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;30;41:sg=0;30;46:tw=0;30;42:ow=0;30;43'
-export LSCOLORS='gxfxcxdxbxegedabagacad'
+export LS_COLORS='di=0;35:ln=0;35:so=0;32:pi=0;33:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;30;41:sg=0;30;46:tw=0;30;42:ow=0;30;43'
+# export LSCOLORS='gxfxcxdxbxegedabagacad'
 
 # Use vi mode
 bindkey -v
