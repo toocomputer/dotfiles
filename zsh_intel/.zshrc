@@ -243,16 +243,21 @@ export PATH="$VOLTA_HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/u
 
 source  <(fzf --zsh)
 
-# Check if tmux is not already running
-if [ -z "$TMUX" ]; then
-  read "session_name?Enter tmux session name (default: Main): "
-  session_name=${session_name:-Main}
+function mux() {
+  # Check if tmux is not already running
+  if [ -z "$TMUX" ]; then
+    read "session_name?Enter tmux session name (default: Main): "
+    session_name=${session_name:-Main}
 
-  read "window_name?Enter tmux window name (default: Main): "
-  window_name=${window_name:-Main}
+    read "window_name?Enter tmux window name (default: Main): "
+    window_name=${window_name:-Main}
 
-  tmux new-session -s "$session_name" -n "$window_name"
-fi
+    read "start_dir?Enter directory to start session in (default: '~/projects'): "
+    start_dir=${start_dir:-$HOME/projects}
+
+    tmux new-session -s "$session_name" -n "$window_name" -c "$start_dir"
+  fi 
+}
 
 XDG_CONFIG_HOME=$HOME/.config
 
