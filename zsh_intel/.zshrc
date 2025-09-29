@@ -276,6 +276,6 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 [ -s "$HOME/.scm_breeze/scm_breeze.sh" ] && source "$HOME/.scm_breeze/scm_breeze.sh"
 
-PATH=~/.console-ninja/.bin:$PATH
+
 
 eval "$(zoxide init zsh)"
