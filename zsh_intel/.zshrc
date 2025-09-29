@@ -243,7 +243,7 @@ export PATH="$VOLTA_HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/u
 
 source  <(fzf --zsh)
 
-function start_tmux_session() {
+function mux() {
   if [ -n "$TMUX" ]; then
     echo "You are already inside a tmux session."
     return 1
