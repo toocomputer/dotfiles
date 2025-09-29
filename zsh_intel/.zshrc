@@ -243,20 +243,30 @@ export PATH="$VOLTA_HOME/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/u
 
 source  <(fzf --zsh)
 
-function mux() {
-  # Check if tmux is not already running
-  if [ -z "$TMUX" ]; then
-    read "session_name?Enter tmux session name (default: Main): "
-    session_name=${session_name:-Main}
+function start_tmux_session() {
+  if [ -n "$TMUX" ]; then
+    echo "You are already inside a tmux session."
+    return 1
+  fi
 
-    read "window_name?Enter tmux window name (default: Main): "
-    window_name=${window_name:-Main}
+  read "session_name?Enter tmux session name (default: Main): "
+  session_name=${session_name:-Main}
 
-    read "start_dir?Enter directory to start session in (default: '~/projects'): "
-    start_dir=${start_dir:-$HOME/projects}
+  read "window_name?Enter tmux window name (default: Main): "
+  window_name=${window_name:-Main}
 
-    tmux new-session -s "$session_name" -n "$window_name" -c "$start_dir"
-  fi 
+  read "dir_suffix?Enter directory name under ~/projects (default: none): "
+  
+  # Convert input to lowercase (case-insensitive)
+  dir_suffix_lower=$(echo "$dir_suffix" | tr '[:upper:]' '[:lower:]')
+
+  if [ -z "$dir_suffix_lower" ]; then
+    start_dir="$HOME/projects"
+  else
+    start_dir="$HOME/projects/$dir_suffix_lower"
+  fi
+
+  tmux new-session -s "$session_name" -n "$window_name" -c "$start_dir"
 }
 
 XDG_CONFIG_HOME=$HOME/.config
