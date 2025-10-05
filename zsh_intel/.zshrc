@@ -255,7 +255,7 @@ function mux() {
   read "window_name?Enter tmux window name (default: Main): "
   window_name=${window_name:-Main}
 
-  read "dir_suffix?Enter directory name under ~/projects (default: none): "
+  read "dir_suffix?Enter directory name under Projects (default: ~/projects): "
   
   # Convert input to lowercase (case-insensitive)
   dir_suffix_lower=$(echo "$dir_suffix" | tr '[:upper:]' '[:lower:]')
