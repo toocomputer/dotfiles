@@ -22,33 +22,50 @@ Then, change to the repository directory:
 ```
 cd dotfiles
 ```
+*Note:* Make sure to backup your existing configuration files before deploying these dotfiles.
+
+## Installations
+
 #### Homebrew
 - Install [Homebrew](https://brew.sh)
 	- see: [Homebrew Security Best Practices](https://guessi.github.io/posts/2025/homeberw-tips-security/)
+
 #### GNU Stow
 - Install GNU Stow (via Homebrew) 
 -  Run `stow --target=$HOME *` to create symlinks from `~/Projects/dotfiles` to their respective locations in `$HOME` 
 
 #### Starship
+
 - Install Nerd Font
 - Install Starship: `curl -sS https://starship.rs/install.sh | sh`
 
 #### Oh My ZSH
+
 - [Install oh-my-zsh](https://ohmyz.sh/#install)
 
+#### tmux
+
+- [Install tmux](https://github.com/tmux/tmux/wiki/Installing#installing-tmux)
+(via Homebrew): `brew install tmux`
+
 #### eza
+
 - [Install eza](https://github.com/eza-community/eza/blob/main/INSTALL.md#brew-macos) (via Homebrew): `brew install eza`
 
-*Note:* Make sure to backup your existing configuration files before deploying these dotfiles.
+#### SCM Breeze
 
-## Customization
+- [Install SCM
+Breeze](https://github.com/scmbreeze/scm_breeze?tab=readme-ov-file#installation)
 
-You can customize these dotfiles to suit your needs. Some common customizations include:
+#### bat
 
--  Modifying shell prompt settings.
--  Adding aliases and functions in your shell configuration.
--  Configuring editor settings in Vim or other editors.
--  Adjusting Git settings for a better workflow.
+- [Install `bat`](https://github.com/sharkdp/bat?tab=readme-ov-file#on-macos-or-linux-via-homebrew) (via Homebrew): `brew install bat`
+- see: https://www.youtube.com/watch?v=oTNRvnQLLLs
+
+#### zoxide
+
+- [Install `zoxide`](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation) (via Homebrew): `brew install zoxide`
+
 
 ## Contributing
 
