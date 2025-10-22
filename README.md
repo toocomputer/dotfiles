@@ -22,16 +22,22 @@ Then, change to the repository directory:
 ```
 cd dotfiles
 ```
+#### Homebrew
+- Install [Homebrew](https://brew.sh)
+	- see: [Homebrew Security Best Practices](https://guessi.github.io/posts/2025/homeberw-tips-security/)
+#### GNU Stow
+- Install GNU Stow (via Homebrew) 
+-  Run `stow --target=$HOME *` to create symlinks from `~/Projects/dotfiles` to their respective locations in `$HOME` 
 
-This repository uses [GNU Stow](https://www.gnu.org/software/stow/) to manage symlinks for your configuration files. If you don't have GNU Stow installed, you can typically install it with your package manager.
+#### Starship
+- Install Nerd Font
+- Install Starship: `curl -sS https://starship.rs/install.sh | sh`
 
-Once installed, you can create symlinks for a specific set of configurations. For instance, to deploy your bash configuration, run:
+#### Oh My ZSH
+- [Install oh-my-zsh](https://ohmyz.sh/#install)
 
-```
-stow bash
-```
-
-Repeat the above command for other configuration directories (e.g., `zsh`, `vim`, `git`, etc.) as needed.
+#### eza
+- [Install eza](https://github.com/eza-community/eza/blob/main/INSTALL.md#brew-macos) (via Homebrew): `brew install eza`
 
 *Note:* Make sure to backup your existing configuration files before deploying these dotfiles.
 

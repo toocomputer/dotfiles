@@ -135,6 +135,11 @@ alias zsh="v ~/.zshrc"
 alias zterm="v +term"
 
 # MISC FUNCTIONS
+bozocloud() {
+ cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/bozoworks
+ echo "Changed to the 🤡 directory!"
+}
+
 alias cd 2>/dev/null && unalias cd
 cd() {
   builtin cd "$@" && ls
