@@ -2,6 +2,8 @@ vim.keymap.set("n", "<space><space>x", "<cmd>source %<CR>")
 vim.keymap.set("n", "<space>x", ":.lua<CR>")
 vim.keymap.set("v", "<space>x", ":lua<CR>")
 
+vim.keymap.set("i", "jk", "<ESC>", { silent = true })
+
 -- Open Lexplore
 vim.keymap.set("n", "<leader>b", "<Esc>:Lex<CR>:vertical resize 30<CR>", { noremap = true, silent = true })
 vim.keymap.set("i", "<leader>b", "<Esc>:Lex<CR>:vertical resize 30<CR>", { noremap = true, silent = true })
