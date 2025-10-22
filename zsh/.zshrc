@@ -251,3 +251,5 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(zoxide init zsh)"
+
+[ -s "/Users/e/.scm_breeze/scm_breeze.sh" ] && source "/Users/e/.scm_breeze/scm_breeze.sh"
