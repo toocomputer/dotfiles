@@ -135,7 +135,7 @@ alias zsh="v ~/.zshrc"
 alias zterm="v +term"
 
 # MISC FUNCTIONS
-bozocloud() {
+function bozocloud() {
  cd ~/Library/Mobile\ Documents/iCloud~md~obsidian/Documents/bozoworks
  echo "Changed to the 🤡 directory!"
 }
@@ -145,11 +145,11 @@ cd() {
   builtin cd "$@" && ls
 }
 
-dotfiles() {
+function dotfiles() {
   cd ~/dotfiles && git status
 }
 
-gc () {
+function gc() {
   if [ -z "$1" ]; then
     git commit
   else
@@ -158,7 +158,7 @@ gc () {
 }
 
 # https://unix.stackexchange.com/questions/125385/combined-mkdir-and-cd
-mkcd () {
+function mkcd () {
   mkdir -p -- "$1" &&
   cd -P -- "$1"
 }
