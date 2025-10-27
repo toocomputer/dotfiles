@@ -222,8 +222,14 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin
 
 source  <(fzf --zsh)
 
-function mux() {
-  if [ -n "$TMUX" ]; then
+function mx() {
+  if (( $# > 0 )); then
+    # Pass all arguments to tmux if any are given
+    tmux "$@"
+    return $?
+  fi
+
+  if [[ -n "$TMUX" ]]; then
     echo "You are already inside a tmux session."
     return 1
   fi
@@ -235,11 +241,11 @@ function mux() {
   window_name=${window_name:-Main}
 
   read "dir_suffix?Enter directory name under ~/projects (default: none): "
-  
+
   # Convert input to lowercase (case-insensitive)
   dir_suffix_lower=$(echo "$dir_suffix" | tr '[:upper:]' '[:lower:]')
 
-  if [ -z "$dir_suffix_lower" ]; then
+  if [[ -z "$dir_suffix_lower" ]]; then
     start_dir="$HOME/projects"
   else
     start_dir="$HOME/projects/$dir_suffix_lower"
@@ -247,6 +253,7 @@ function mux() {
 
   tmux new-session -s "$session_name" -n "$window_name" -c "$start_dir"
 }
+
 
 XDG_CONFIG_HOME=$HOME/.config
 
