@@ -158,9 +158,13 @@ function gc() {
 }
 
 # https://unix.stackexchange.com/questions/125385/combined-mkdir-and-cd
-function mkcd () {
+function mkcd() {
   mkdir -p -- "$1" &&
   cd -P -- "$1"
+}
+
+function b() {
+  bat "$1"
 }
 
 export PATH="/usr/local/opt/ruby/bin:$PATH"
