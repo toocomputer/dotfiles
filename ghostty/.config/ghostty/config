@@ -3,4 +3,4 @@ theme = tokyonight
 quit-after-last-window-closed = true
 macos-icon = custom
 maximize = true
-cursor-color = #7aa2f7
+cursor-color = #f7768e
