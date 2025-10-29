@@ -167,6 +167,10 @@ function b() {
   bat "$1"
 }
 
+function icon() {
+  png-to-icns -i "$1"
+}
+
 export PATH="/usr/local/opt/ruby/bin:$PATH"
 eval "$(starship init zsh)"
 
