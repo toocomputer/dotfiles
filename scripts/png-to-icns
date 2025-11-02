@@ -39,7 +39,7 @@ fi
 # if extension not .png, display error message
 if [[ ! $image_path =~ .png$ ]]
 then
-    echo "ERROR: image path need to end with .png"
+    echo "ERROR: image path should end with .png"
     exit 1
 fi
 
