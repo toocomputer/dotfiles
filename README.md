@@ -66,6 +66,10 @@ Breeze](https://github.com/scmbreeze/scm_breeze?tab=readme-ov-file#installation)
 
 - [Install `zoxide`](https://github.com/ajeetdsouza/zoxide?tab=readme-ov-file#installation) (via Homebrew): `brew install zoxide`
 
+#### nvm
+
+- [Install `nvm`](https://github.com/nvm-sh/nvm?tab=readme-ov-file#installing-and-updating)
+
 
 ## Contributing
 
