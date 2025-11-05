@@ -48,6 +48,8 @@
   name = toocomputer
   email = 2061889+toocomputer@users.noreply.github.com
 
-[user]
-  name = ekmag
-  email = 195157449+ekmag@users.noreply.github.com
+[includeIf "gitdir:~/MagProjects/"]
+  path = ~/.gitconfig-work
+
+[includeIf "gitdir:~/Projects/"]
+  path = ~/.gitconfig-personal
