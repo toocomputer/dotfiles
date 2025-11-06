@@ -23,6 +23,7 @@ Icon?
 
 # Node.js
 node_modules/
+.env
 
 # Python
 __pycache__/
