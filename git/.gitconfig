@@ -44,12 +44,12 @@
 [url "https://"]
 	insteadOf = git://
 
-[user]
-  name = toocomputer
-  email = 2061889+toocomputer@users.noreply.github.com
+#[user]
+#  name = toocomputer
+#  email = 2061889+toocomputer@users.noreply.github.com
 
-[includeIf "gitdir:~/MagProjects/"]
+[includeIf "gitdir/i:~/MagProjects/"]
   path = ~/.gitconfig-work
 
-[includeIf "gitdir:~/Projects/"]
+[includeIf "gitdir/i:~/Projects/"]
   path = ~/.gitconfig-personal
