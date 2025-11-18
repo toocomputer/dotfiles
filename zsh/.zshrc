@@ -258,6 +258,14 @@ function mx() {
   tmux new-session -s "$session_name" -n "$window_name" -c "$start_dir"
 }
 
+if [[ "$VSCODE_PROFILE" == "web" ]]; then
+  export STARSHIP_CONFIG="$HOME/.config/starship-web.toml"
+elif [[ "$VSCODE_PROFILE" == "python" ]]; then
+  export STARSHIP_CONFIG="$HOME/.config/starship-python.toml"
+else
+  export STARSHIP_CONFIG="$HOME/.config/starship.toml"
+fi
+
 
 XDG_CONFIG_HOME=$HOME/.config
 
