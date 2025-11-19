@@ -72,7 +72,7 @@ format = '[$all_status$ahead_behind ]($style)'
 
 
 [nodejs]
-symbol = ""
+symbol = "󰎙"
 style = "bg:#ff7edb"
 format = '[ $symbol ($version) ]($style)'
 
