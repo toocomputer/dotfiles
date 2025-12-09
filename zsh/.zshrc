@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias bozo="cd $HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Bozoworks"
+alias bozo="cd '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Bozoworks'"
 alias caffeine="caffeinate -t 144000 &"
 alias cdvim="cd $HOME/.config/nvim"
 alias chistory="echo "" > ~/.zsh_history & exec $SHELL -l"
