@@ -94,7 +94,7 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias bozo="cd $HOME/projects/bozoworks"
+alias bozo="cd $HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Bozoworks"
 alias caffeine="caffeinate -t 144000 &"
 alias cdvim="cd $HOME/.config/nvim"
 alias chistory="echo "" > ~/.zsh_history & exec $SHELL -l"
@@ -125,6 +125,7 @@ alias projects="cd $HOME/Projects"
 alias pn=pnpm
 alias python=/usr/bin/python3
 alias raycast="cd ~/bin/raycast"
+alias resize="$HOME/bin/scripts/resize"
 alias serve="http-server -o -c-1"
 alias sz="source ~/.zshrc"
 alias shot="screencapture -x -T 3 ~/Desktop/sc.png"
