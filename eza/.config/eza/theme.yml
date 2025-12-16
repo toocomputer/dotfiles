@@ -2,11 +2,15 @@ colourful: true
 
 filekinds:
   normal: { foreground: "#c0caf5" }
-  directory: { foreground: "#7aa2f7" }
+  directory: { foreground: "#bb9af7" }
   symlink: { foreground: "#2ac3de" }
   pipe: { foreground: "#414868" }
-  block_device: { foreground: "#e0af68" }
-  char_device: { foreground: "#e0af68" }
+  block_device: 
+    foreground: "#e0af68"
+    is_bold: false
+  char_device: 
+    foreground: "#e0af68"
+    is_bold: false
   socket: { foreground: "#414868" }
   special: { foreground: "#9d7cd8" }
   executable: { foreground: "#9ece6a" }
@@ -85,7 +89,9 @@ file_type:
   compressed: { foreground: "#ff9e64" }
   temp: { foreground: "#737aa2" }
   compiled: { foreground: "#737aa2" }
-  build: { foreground: "#1abc9c" }
+  build: 
+    foreground: "#9ece6a"
+    is_bold: false
   source: { foreground: "#bb9af7" }
 
 punctuation: { foreground: "#414868" }
@@ -100,3 +106,33 @@ symlink_path: { foreground: "#89ddff" }
 control_char: { foreground: "#ff9e64" }
 broken_symlink: { foreground: "#ff007c" }
 broken_path_overlay: { foreground: "#ff007c" }
+
+extensions:
+  # Change the filename color and icon
+  # NOTE: not all unicode glyphs support color changes
+  rs: 
+    filename: 
+      foreground: Red
+    icon: 
+      glyph: 🦀
+  js: 
+    filename: 
+      foreground: "#7dcfff"
+      is_bold: false
+    icon:
+      style:
+        foreground: "#7dcfff"
+  ts: 
+    filename: 
+      foreground: "#73daca"
+      is_bold: false
+    icon:
+      style:
+        foreground: "#73daca"
+  # Change the icon glyph and color
+  # nix: 
+  #   icon: 
+  #     glyph: ❄
+  #     style: 
+  #       foreground: White
+

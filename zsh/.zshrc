@@ -190,8 +190,10 @@ esac
 autoload -U +X bashcompinit && bashcompinit
 complete -o nospace -C /usr/local/bin/terraform terraform
 
-export LS_COLORS='di=0;35:ln=0;35:so=0;32:pi=0;33:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;30;41:sg=0;30;46:tw=0;30;42:ow=0;30;43'
+# export LS_COLORS='di=0;35:ln=0;35:so=0;32:pi=0;33:ex=0;31:bd=0;34;46:cd=0;34;43:su=0;30;41:sg=0;30;46:tw=0;30;42:ow=0;30;43'
 # export LSCOLORS='gxfxcxdxbxegedabagacad'
+
+export EZA_CONFIG_DIR="$HOME/.config/eza"
 
 # Use vi mode
 bindkey -v
