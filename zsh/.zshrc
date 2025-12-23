@@ -235,30 +235,6 @@ function mx() {
     tmux "$@"
     return $?
   fi
-
-  if [[ -n "$TMUX" ]]; then
-    echo "You are already inside a tmux session."
-    return 1
-  fi
-
-  read "session_name?Enter tmux session name (default: Main): "
-  session_name=${session_name:-Main}
-
-  read "window_name?Enter tmux window name (default: Main): "
-  window_name=${window_name:-Main}
-
-  read "dir_suffix?Enter directory name under ~/projects (default: none): "
-
-  # Convert input to lowercase (case-insensitive)
-  dir_suffix_lower=$(echo "$dir_suffix" | tr '[:upper:]' '[:lower:]')
-
-  if [[ -z "$dir_suffix_lower" ]]; then
-    start_dir="$HOME/projects"
-  else
-    start_dir="$HOME/projects/$dir_suffix_lower"
-  fi
-
-  tmux new-session -s "$session_name" -n "$window_name" -c "$start_dir"
 }
 
 if [[ "$VSCODE_PROFILE" == "web" ]]; then
