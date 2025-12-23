@@ -1,4 +1,4 @@
-#Path to your oh-my-zsh installation.
+#Path to your oh-y-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
@@ -233,8 +233,11 @@ function mx() {
   if (( $# > 0 )); then
     # Pass all arguments to tmux if any are given
     tmux "$@"
-    return $?
+  else
+    # No arguments: start new tmux session named Main
+    tmux new -s Main
   fi
+  return $?
 }
 
 if [[ "$VSCODE_PROFILE" == "web" ]]; then
