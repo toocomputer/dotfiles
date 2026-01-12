@@ -230,23 +230,35 @@ export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin
 source  <(fzf --zsh)
 
 function mx() {
-  if (( $# > 0 )); then
-    # Pass all arguments to tmux if any are given
-    tmux "$@"
-  else
-    # No arguments: prompt repeatedly for session name until not empty
-    while true; do
-      read "session_name?Enter tmux session name: "
-      if [[ -n $session_name ]]; then
-        tmux new -s "$session_name"
-        break
-      else
-        echo "Session name cannot be empty. Please try again."
-      fi
-    done
+  # Start tmux server if not running
+  if ! tmux info &>/dev/null; then
+    tmux start-server
   fi
-  return $?
+
+  # Check if any tmux sessions exist
+  if tmux list-sessions &>/dev/null; then
+    # Sessions exist, attach to the most recently used session
+    tmux attach-session -t "$(tmux list-sessions -F '#S' | head -n1)"
+  else
+    # No sessions: create a temporary session to run restore script
+    tmux new-session -d -s __tmp_restore
+
+    # Run tmux-resurrect restore script inside tmux server context
+    tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh
+
+    # Kill the temporary session (it is no longer needed)
+    tmux kill-session -t __tmp_restore
+
+    # After restore, attach to the restored session(s) if any
+    if tmux list-sessions &>/dev/null; then
+      tmux attach-session -t "$(tmux list-sessions -F '#S' | head -n1)"
+    else
+      # No sessions restored, create and attach to a new default session
+      tmux new-session
+    fi
+  fi
 }
+
 
 if [[ "$VSCODE_PROFILE" == "web" ]]; then
   export STARSHIP_CONFIG="$HOME/.config/starship-web.toml"
