@@ -234,8 +234,16 @@ function mx() {
     # Pass all arguments to tmux if any are given
     tmux "$@"
   else
-    # No arguments: start new tmux session named Main
-    tmux new -s Main
+    # No arguments: prompt repeatedly for session name until not empty
+    while true; do
+      read "session_name?Enter tmux session name: "
+      if [[ -n $session_name ]]; then
+        tmux new -s "$session_name"
+        break
+      else
+        echo "Session name cannot be empty. Please try again."
+      fi
+    done
   fi
   return $?
 }
