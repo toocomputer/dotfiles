@@ -95,6 +95,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias bozo="cd '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Bozoworks'"
+alias breeze="v ~/.git.scmbrc"
 alias caffeine="caffeinate -t 144000 &"
 alias cdvim="cd $HOME/.config/nvim"
 alias chistory="echo "" > ~/.zsh_history & exec $SHELL -l"
