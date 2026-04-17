@@ -11,7 +11,7 @@
 # Documentation:
 # @raycast.description Open Icons
 
-open ~/Library/CloudStorage/Dropbox/Icons
+open ~/Projects/Design/Icons
 open /Applications/
 
 osascript -e 'tell application "System Events" to key code 53'
