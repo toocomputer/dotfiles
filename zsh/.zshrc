@@ -123,7 +123,6 @@ alias ohmyzsh="v ~/.oh-my-zsh"
 alias newvite="npm create vite@latest"
 alias projects="cd $HOME/Projects"
 alias pn=pnpm
-alias python=/usr/bin/python3
 alias raycast="cd ~/bin/raycast"
 alias resize="$HOME/bin/scripts/resize"
 alias serve="http-server -o -c-1"
