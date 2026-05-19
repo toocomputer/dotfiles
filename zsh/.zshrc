@@ -278,3 +278,6 @@ export NVM_DIR="$HOME/.config/nvm"
 eval "$(zoxide init zsh)"
 
 [ -s "/Users/e/.scm_breeze/scm_breeze.sh" ] && source "/Users/e/.scm_breeze/scm_breeze.sh"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
