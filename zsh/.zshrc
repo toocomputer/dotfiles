@@ -93,7 +93,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
+alias bear="/Applications/Bear.app/Contents/MacOS/bearcli"
 alias bozo="cd '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Bozoworks'"
 alias breeze="v ~/.git.scmbrc"
 alias caffeine="caffeinate -t 144000 &"
@@ -107,7 +107,6 @@ alias dot="cd $HOME/dotfiles"
 alias f='nvim $(fzf -m --preview="bat --color=always {}")'
 alias globals="npm list -g --depth 0"
 alias gs="git status"
-alias ggpush="git push origin main"
 alias hci="cd $HOME/MagProjects/HCI"
 alias ilua="v ~/.config/nvim/init.lua"
 alias ip="curl ifconfig.me"
@@ -117,7 +116,7 @@ alias live="live-server"
 alias ll="ls -al"
 alias lt="eza -T -a --icons --color"
 alias ltl="eza -l -T -a --icons --color"
-alias ls="eza --all --group-directories-first --icons"
+alias ls="eza --all --icons --group-directories-first --sort=modified -r"
 alias mymag="cd $HOME/MagProjects/myMag"
 alias omz="omz update"
 alias ohmyzsh="v ~/.oh-my-zsh"
