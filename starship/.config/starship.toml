@@ -73,7 +73,7 @@ style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
 [python]
-symbol = ""
+symbol = ""
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
 
@@ -97,5 +97,3 @@ style = 'fg:#7b89a6 bg:#1d2230'
 [character]
 success_symbol = '[➜](green)'
 error_symbol = '[✗](red)'
-
-
