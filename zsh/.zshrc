@@ -96,6 +96,7 @@ source $ZSH/oh-my-zsh.sh
 alias bear="/Applications/Bear.app/Contents/MacOS/bearcli"
 alias bozo="cd '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Bozoworks'"
 alias breeze="v ~/.git.scmbrc"
+alias cc="clear"
 alias caffeine="caffeinate -t 144000 &"
 alias cdvim="cd $HOME/.config/nvim"
 alias chistory="echo "" > ~/.zsh_history & exec $SHELL -l"
@@ -277,6 +278,3 @@ export NVM_DIR="$HOME/.config/nvm"
 eval "$(zoxide init zsh)"
 
 [ -s "/Users/e/.scm_breeze/scm_breeze.sh" ] && source "/Users/e/.scm_breeze/scm_breeze.sh"
-
-# Created by `pipx` on 2026-05-19 18:56:03
-export PATH="$PATH:/Users/ekathuria/Library/Python/3.9/bin"
