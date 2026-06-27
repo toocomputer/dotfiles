@@ -8,7 +8,7 @@
     "modules-right": ["cpu", "memory", "disk", "network", "tray"],
 
     "custom/arch": {
-        "format": "",
+        "format": "",
         "tooltip": false
     },
 
@@ -27,30 +27,30 @@
 
     "cpu": {
         "interval": 5,
-        "format": "{usage}%",
+        "format": "cpu: {usage}%",
         "on-click": "xdg-terminal-exec btop"
     },
 
     "memory": {
         "interval": 5,
-        "format": "{percentage}%",
+        "format": "mem: {percentage}%",
         "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB used"
     },
 
     "disk": {
         "interval": 60,
         "path": "/",
-        "format": "{percentage_used}%",
+        "format": "disk: {percentage_used}%",
         "tooltip-format": "{used} / {total} used"
     },
 
     "network": {
-        "format-wifi": "",
-        "format-ethernet": "",
-        "format-disconnected": "",
+        "format-wifi": "",
+        "format-ethernet": "",
+        "format-disconnected": "",
         "tooltip-format-ethernet": "{ifname} via {gwaddr}",
         "tooltip-format-disconnected": "Disconnected"
-    }
+    },
 
     "tray": {
         "icon-size": 18,

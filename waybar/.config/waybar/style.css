@@ -87,6 +87,7 @@ tooltip label {
 }
 
 #network {
+  font-size: 22px;
   padding: 0 13px;
 }
 
@@ -95,7 +96,7 @@ tooltip label {
 }
 
 #custom-arch {
-  font-size: 18px;
+  font-size: 22px;
   color: @foreground;
   padding: 0 10px;
 }
