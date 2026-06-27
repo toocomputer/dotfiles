@@ -3,9 +3,14 @@
     "margin-top": 2,
     "margin-bottom": 1,
 
-    "modules-left": ["clock"],
-    "modules-center": ["hyprland/workspaces"],
-    "modules-right": ["cpu", "pulseaudio", "network", "tray"],
+    "modules-left": ["custom/arch", "hyprland/workspaces"],
+    "modules-center": [],
+    "modules-right": ["clock", "cpu", "pulseaudio", "network", "tray"],
+
+    "custom/arch": {
+    "format": "",
+    "tooltip": false
+    },
 
     "clock": {
         "interval": 60,
