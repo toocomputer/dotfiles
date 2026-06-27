@@ -14,7 +14,7 @@
 
     "clock": {
         "interval": 60,
-        "format": "{:%I:%M %p | %a • %b | %Y-%m-%d}",
+        "format": "{:%I:%M %p | %a • %b | %m-%d}",
         "tooltip": false
     },
 
