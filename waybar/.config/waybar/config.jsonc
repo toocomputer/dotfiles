@@ -14,7 +14,7 @@
 
     "clock": {
         "interval": 60,
-        "format": "{:<span color='#cdd6f4'>%I:%M %p</span> <span color='#fab387'>%z</span> <span color='#7c7f93'>|</span> <span color='#b4befe'>%a</span> <span color='#7c7f93'>•</span> <span color='#89b4fa'>%b</span> <span color='#7c7f93'>|</span> <span color='#cba6f7'>%Y-%m-%d</span>}",
+        "format": "{:%I:%M %p | %a • %b | %Y-%m-%d}",
         "tooltip": false
     },
 
