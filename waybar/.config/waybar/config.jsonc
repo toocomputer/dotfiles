@@ -4,18 +4,17 @@
     "margin-bottom": 1,
 
     "modules-left": ["custom/arch", "hyprland/workspaces"],
-    "modules-center": [],
-    "modules-right": ["clock", "cpu", "pulseaudio", "network", "tray"],
+    "modules-center": ["clock"],
+    "modules-right": ["cpu", "pulseaudio", "network", "tray"],
 
     "custom/arch": {
-    "format": "",
-    "tooltip": false
+        "format": "",
+        "tooltip": false
     },
 
     "clock": {
         "interval": 60,
-        "format": "{:%A %H:%M}",
-        "format-alt": "{:%d %B %Y}",
+        "format": "<span color='#cdd6f4'>{:%I:%M %p}</span> <span color='#fab387'>{:%z}</span> <span color='#7c7f93'>|</span> <span color='#b4befe'>{:%a}</span> <span color='#7c7f93'>•</span> <span color='#89b4fa'>{:%b}</span> <span color='#7c7f93'>|</span> <span color='#cba6f7'>{:%Y-%m-%d}</span>",
         "tooltip": false
     },
 
