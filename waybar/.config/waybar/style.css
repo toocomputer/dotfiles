@@ -68,7 +68,8 @@ tooltip label {
 #cpu,
 #pulseaudio,
 #network,
-#clock {
+#clock
+#custom-arch {
   background-color: alpha(@foreground, 0.18);
   border: 1px solid alpha(@foreground, 0.28);
   padding: 0 6px 0 6px;
@@ -88,4 +89,10 @@ tooltip label {
 
 #tray {
   margin-left: 10px;
+}
+
+#custom-arch {
+  font-size: 18px;
+  color: @foreground;
+  padding: 0 10px;
 }

@@ -8,7 +8,7 @@
     "modules-right": ["clock", "cpu", "pulseaudio", "network", "tray"],
 
     "custom/arch": {
-    "format": "",
+    "format": "",
     "tooltip": false
     },
 
