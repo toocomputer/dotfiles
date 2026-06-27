@@ -81,3 +81,44 @@ tooltip label {
   background-color: alpha(@blue, 0.18);
   border-color: alpha(@blue, 0.35);
   color: @blue;
+  padding: 0 10px;
+}
+
+#cpu {
+  background-color: alpha(@peach, 0.18);
+  border-color: alpha(@peach, 0.35);
+  color: @peach;
+}
+
+#pulseaudio {
+  background-color: alpha(@lavender, 0.18);
+  border-color: alpha(@lavender, 0.35);
+  color: @lavender;
+  padding: 0 13px;
+}
+
+#pulseaudio.muted {
+  background-color: alpha(@foreground, 0.1);
+  border-color: alpha(@foreground, 0.2);
+  color: alpha(@foreground, 0.5);
+}
+
+#network {
+  background-color: alpha(@yellow, 0.18);
+  border-color: alpha(@yellow, 0.35);
+  color: @yellow;
+  padding: 0 13px;
+}
+
+#network.disconnected {
+  background-color: alpha(@red, 0.18);
+  border-color: alpha(@red, 0.35);
+  color: @red;
+}
+
+#tray {
+  background-color: alpha(@foreground, 0.18);
+  border-color: alpha(@foreground, 0.28);
+  margin-left: 10px;
+  color: @foreground;
+}
