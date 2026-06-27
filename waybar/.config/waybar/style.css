@@ -30,8 +30,8 @@ tooltip label {
 }
 
 #workspaces {
-  background-color: alpha(@background, 0.7);
-  border: 1px solid alpha(@background, 0.28);
+  background-color: alpha(@foreground, 0.18);
+  border: 1px solid alpha(@foreground, 0.28);
   padding: 5px 3px;
   margin: 0 0 0 12px;
   border-radius: 16px;
