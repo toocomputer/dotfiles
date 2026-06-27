@@ -58,6 +58,12 @@ tooltip label {
   opacity: 0.5;
 }
 
+#workspaces button:hover,
+#workspaces button:focus {
+  box-shadow: none;
+  outline: none;
+}
+
 #tray,
 #cpu,
 #pulseaudio,
