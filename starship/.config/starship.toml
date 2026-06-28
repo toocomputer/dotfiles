@@ -2,7 +2,7 @@ format = """
 [ ](bg:#414e62 fg:#414e62)\
 [ ](bg:#5E6A81 fg:#5E6A81)\
 [ ](bg:#7B89A6 fg:#7B89A6)\
-[  ](bg:#a3aed2 fg:#090c0c)\
+[ $os ](bg:#a3aed2 fg:#090c0c)\
 [](bg:#769ff0 #a3aed2)\
 $directory\
 [](fg:#769ff0 bg:#394260)\
@@ -56,6 +56,15 @@ format = '[[($all_status$ahead_behind )](fg:#769ff0 bg:#394260)]($style)'
 symbol = "󰎙"
 style = "bg:#212736"
 format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[os]
+disabled = false
+style = "bg:#a3aed2 fg:#090c0c"
+
+[os.symbols]
+Macos = ""
+Arch = "󰣇"
+Linux = "󰣇"
 
 [rust]
 symbol = ""
