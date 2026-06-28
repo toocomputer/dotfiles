@@ -130,7 +130,11 @@ alias resize="$HOME/bin/scripts/resize"
 alias serve="http-server -o -c-1"
 alias sz="source ~/.zshrc"
 alias shot="screencapture -x -T 3 ~/Desktop/sc.png"
-alias v="$HOME/bin/nvim-macos-arm64/bin/nvim"
+if [[ "$(uname)" == "Darwin" ]]; then
+  alias v="$HOME/bin/nvim-macos-arm64/bin/nvim"
+else
+  alias v="nvim"
+fi
 alias vite-dir="npx vite-dir"
 alias vscs="cd $HOME/projects/vscs"
 alias zsh="v ~/.zshrc"
@@ -226,7 +230,11 @@ zle -N zle-keymap-select
 zle -N zle-line-init
 zle -N zle-line-finish
 
-export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-arm64/bin:$HOME/bin:$HOME/.local/bin:$HOME/bin/scripts:$HOME/Library/pnpm"
+if [[ "$(uname)" == "Darwin" ]]; then
+  export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-arm64/bin:$HOME/bin:$HOME/.local/bin:$HOME/bin/scripts:$HOME/Library/pnpm"
+else
+  export PATH="/usr/local/bin:/usr/bin:/bin:$HOME/bin:$HOME/.local/bin:$HOME/bin/scripts:/usr/sbin:/usr/local/sbin"
+fi
 
 source  <(fzf --zsh)
 
@@ -279,3 +287,13 @@ export NVM_DIR="$HOME/.config/nvm"
 eval "$(zoxide init zsh)"
 
 [ -s "/Users/e/.scm_breeze/scm_breeze.sh" ] && source "/Users/e/.scm_breeze/scm_breeze.sh"
+
+export XDG_CURRENT_DESKTOP=Hyprland
+
+if [[ "$(tty)" = /dev/tty* ]] || [[ "$(tty)" == /dev/pts/0 ]]; then
+	sudo systemctl restart seatd
+	AQ_NO_KMS_REQUIREMENT=1 uwsm start -- start-hyprland
+fi
+
+precmd_functions=(${precmd_functions:#prompt_grml_precmd})
+prompt_starship_precmd
