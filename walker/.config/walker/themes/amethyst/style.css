@@ -47,3 +47,34 @@ child:hover {
   background-color: alpha(@hover, 0.1);
   color: @hover;
 }
+
+window {
+  border-radius: 16px;
+}
+
+.search-container,
+.search {
+  border-radius: 16px 16px 0 0;
+}
+
+list {
+  background: alpha(@base, 0.95);
+  color: @foreground;
+}
+
+row {
+  background: transparent;
+  color: @foreground;
+  padding: 8px 12px;
+}
+
+row:selected,
+child:selected {
+  background-color: alpha(@selected-box, 0.25);
+  border-radius: 10px;
+}
+
+.activation-label {
+  opacity: 0.4;
+  font-size: 11px;
+}
