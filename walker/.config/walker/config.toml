@@ -1,0 +1,12 @@
+[providers]
+default = ["desktopapplications", "calc", "runner"]
+empty = ["desktopapplications"]
+max_results = 50
+
+[placeholders]
+"default" = { input = "Search...", list = "No Results" }
+"desktopapplications" = { input = "Launch App", list = "No Apps Found" }
+
+[theme]
+theme = "style"
+theme_location = "~/.config/walker"
