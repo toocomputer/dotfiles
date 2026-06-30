@@ -96,7 +96,7 @@ source $ZSH/oh-my-zsh.sh
 alias bear="/Applications/Bear.app/Contents/MacOS/bearcli"
 alias bozo="cd '$HOME/Library/Mobile Documents/iCloud~md~obsidian/Documents/Bozoworks'"
 alias breeze="v ~/.git.scmbrc"
-alias cc="clear"
+alias aa="clear"
 alias caffeine="caffeinate -t 144000 &"
 alias cdvim="cd $HOME/.config/nvim"
 alias chistory="echo "" > ~/.zsh_history & exec $SHELL -l"
@@ -290,9 +290,11 @@ eval "$(zoxide init zsh)"
 
 export XDG_CURRENT_DESKTOP=Hyprland
 
-if [[ "$(tty)" = /dev/tty* ]] || [[ "$(tty)" == /dev/pts/0 ]]; then
-	sudo systemctl restart seatd
-	AQ_NO_KMS_REQUIREMENT=1 uwsm start -- start-hyprland
+if [[ "$(uname)" == "Linux" ]]; then
+  if [[ "$(tty)" = /dev/tty* ]] || [[ "$(tty)" = /dev/pts/0 ]]; then
+    sudo systemctl restart seatd
+    AQ_NO_KMS_REQUIREMENT=1 uwsm start -- start-hyprland
+  fi
 fi
 
 precmd_functions=(${precmd_functions:#prompt_grml_precmd})
