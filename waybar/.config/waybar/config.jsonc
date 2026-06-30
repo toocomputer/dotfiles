@@ -27,20 +27,20 @@
 
     "cpu": {
         "interval": 5,
-        "format": "<span color='#cba6f7'>cpu:</span> {usage}%",
+        "format": "<span color='#8bd5ca'>cpu:</span> {usage}%",
         "on-click": "kitty --class btop-monitor btop"
     },
 
     "memory": {
         "interval": 5,
-        "format": "<span color='#cba6f7'>mem:</span> {percentage}%",
+        "format": "<span color='#f5bde6'>mem:</span> {percentage}%",
         "tooltip-format": "{used:0.1f}GB / {total:0.1f}GB used"
     },
 
     "disk": {
         "interval": 60,
         "path": "/",
-        "format": "<span color='#cba6f7'>disk:</span> {percentage_used}%",
+        "format": "<span color='#eed49f'>disk:</span> {percentage_used}%",
         "tooltip-format": "{used} / {total} used"
     },
 
