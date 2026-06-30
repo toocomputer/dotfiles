@@ -8,3 +8,6 @@ max_results = 50
 [placeholders]
 "default" = { input = "Search...", list = "No Results" }
 "desktopapplications" = { input = "Launch App", list = "No Apps Found" }
+
+[keybinds]
+quick_activate = []
