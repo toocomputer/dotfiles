@@ -114,6 +114,7 @@ alias ilua="v ~/.config/nvim/init.lua"
 alias ip="curl ifconfig.me"
 alias kb="v $HOME/Library/Application\ Support/Code/User/keybindings.json"
 alias launch="cd; ~/projects/launch"
+alias lazy='NVIM_APPNAME=lazyvim nvim'
 alias live="live-server"
 alias ll="ls -al"
 alias lt="eza -T -a --icons --color"
