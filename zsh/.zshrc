@@ -124,6 +124,9 @@ alias mymag="cd $HOME/MagProjects/myMag"
 alias omz="omz update"
 alias ohmyzsh="v ~/.oh-my-zsh"
 alias newvite="npm create vite@latest"
+if [[ "$(uname)" == "Darwin" ]]; then
+  alias nvim="$HOME/bin/nvim-macos-arm64/bin/nvim"
+fi
 alias projects="cd $HOME/Projects"
 alias pn=pnpm
 alias raycast="cd ~/bin/raycast"
@@ -131,11 +134,7 @@ alias resize="$HOME/bin/scripts/resize"
 alias serve="http-server -o -c-1"
 alias sz="source ~/.zshrc"
 alias shot="screencapture -x -T 3 ~/Desktop/sc.png"
-if [[ "$(uname)" == "Darwin" ]]; then
-  alias v="$HOME/bin/nvim-macos-arm64/bin/nvim"
-else
-  alias v="nvim"
-fi
+alias v='NVIM_APPNAME=lazyvim command nvim'
 alias vite-dir="npx vite-dir"
 alias vscs="cd $HOME/projects/vscs"
 alias zsh="v ~/.zshrc"
