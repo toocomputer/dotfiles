@@ -1,5 +1,4 @@
-theme = "style"
-theme_location = "~/.config/walker"
+theme = "amethyst"
 
 [providers]
 default = ["desktopapplications", "calc", "runner"]
