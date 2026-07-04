@@ -132,6 +132,7 @@ alias pn=pnpm
 alias raycast="cd ~/bin/raycast"
 alias resize="$HOME/bin/scripts/resize"
 alias serve="http-server -o -c-1"
+alias ssd="sudo shutdown now"
 alias sz="source ~/.zshrc"
 alias shot="screencapture -x -T 3 ~/Desktop/sc.png"
 alias v='NVIM_APPNAME=lazyvim command nvim'
