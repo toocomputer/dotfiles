@@ -111,7 +111,6 @@ alias globals="npm list -g --depth 0"
 alias gs="git status"
 alias hci="cd $HOME/MagProjects/HCI"
 alias ilua="v ~/.config/nvim/init.lua"
-alias ip="curl ifconfig.me"
 alias kb="v $HOME/Library/Application\ Support/Code/User/keybindings.json"
 alias launch="cd; ~/projects/launch"
 alias lazy='NVIM_APPNAME=lazyvim nvim'
