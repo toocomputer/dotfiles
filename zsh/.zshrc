@@ -108,6 +108,7 @@ alias ee="exit"
 # https://stackoverflow.com/questions/41963660/how-to-open-a-file-in-a-specific-application-from-fzf#64416946
 alias f='nvim $(fzf -m --preview="bat --color=always {}")'
 alias globals="npm list -g --depth 0"
+alias gg="lazygit"
 alias gs="git status"
 alias hci="cd $HOME/MagProjects/HCI"
 alias ilua="v ~/.config/nvim/init.lua"
