@@ -120,6 +120,7 @@ alias ll="ls -al"
 alias lt="eza -T -a --icons --color"
 alias ltl="eza -l -T -a --icons --color"
 alias ls="eza --all --icons --group-directories-first --sort=modified -r"
+alias mx="tmux attach || tmux new-session"
 alias mymag="cd $HOME/MagProjects/myMag"
 alias omz="omz update"
 alias ohmyzsh="v ~/.oh-my-zsh"
@@ -238,37 +239,6 @@ else
 fi
 
 source  <(fzf --zsh)
-
-function mx() {
-  # Start tmux server if not running
-  if ! tmux info &>/dev/null; then
-    tmux start-server
-  fi
-
-  # Check if any tmux sessions exist
-  if tmux list-sessions &>/dev/null; then
-    # Sessions exist, attach to the most recently used session
-    tmux attach-session -t "$(tmux list-sessions -F '#S' | head -n1)"
-  else
-    # No sessions: create a temporary session to run restore script
-    tmux new-session -d -s __tmp_restore
-
-    # Run tmux-resurrect restore script inside tmux server context
-    tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh
-
-    # Kill the temporary session (it is no longer needed)
-    tmux kill-session -t __tmp_restore
-
-    # After restore, attach to the restored session(s) if any
-    if tmux list-sessions &>/dev/null; then
-      tmux attach-session -t "$(tmux list-sessions -F '#S' | head -n1)"
-    else
-      # No sessions restored, create and attach to a new default session
-      tmux new-session
-    fi
-  fi
-}
-
 
 if [[ "$VSCODE_PROFILE" == "web" ]]; then
   export STARSHIP_CONFIG="$HOME/.config/starship-web.toml"
