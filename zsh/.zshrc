@@ -261,10 +261,10 @@ eval "$(zoxide init zsh)"
 
 export XDG_CURRENT_DESKTOP=Hyprland
 
-if [[ "$(uname)" == "Linux" ]]; then
-  if [[ "$(tty)" = /dev/tty* ]] || [[ "$(tty)" = /dev/pts/0 ]]; then
-    sudo systemctl restart seatd
-    AQ_NO_KMS_REQUIREMENT=1 uwsm start -- start-hyprland
+if [[ "$(uname)" = "Linux" ]]; then
+  if [[ "$(tty)" = /dev/tty1 ]]; then
+    sudo chmod 666 /dev/tty
+    AQ_NO_KMS_REQUIREMENT=1 setsid -f uwsm start -- start-hyprland >/dev/null 2>&1
   fi
 fi
 
