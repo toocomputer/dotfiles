@@ -129,7 +129,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
   alias nvim="$HOME/bin/nvim-macos-arm64/bin/nvim"
 fi
 alias projects="cd $HOME/Projects"
-alias pn=pnpm
+alias prd="pnpm run deploy"
 alias raycast="cd ~/bin/raycast"
 alias resize="$HOME/bin/scripts/resize"
 alias serve="http-server -o -c-1"
