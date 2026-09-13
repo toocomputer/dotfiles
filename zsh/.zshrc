@@ -131,6 +131,7 @@ if [[ "$(uname)" == "Darwin" ]]; then
 fi
 alias pn=pnpm
 alias projects="cd $HOME/Projects"
+alias python="python3"
 alias prd="pnpm run deploy"
 alias raycast="cd ~/bin/raycast"
 alias resize="$HOME/bin/scripts/resize"
@@ -235,7 +236,7 @@ zle -N zle-line-init
 zle -N zle-line-finish
 
 if [[ "$(uname)" == "Darwin" ]]; then
-  export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-arm64/bin:$HOME/bin:$HOME/.local/bin:$HOME/bin/scripts:$HOME/Library/pnpm"
+  export PATH="/opt/workbrew/bin:/opt/homebrew/bin:/usr/local/bin:/usr/local/sbin:/usr/sbin:/usr/bin:/bin:$HOME/bin:$HOME/.gem/ruby/2.6.0/bin:$(yarn global bin 2>/dev/null):$HOME/bin/fzf:./node_modules/.bin:/usr/local/git/bin:$HOME/bin/nvim-macos-arm64/bin:$HOME/bin:$HOME/.local/bin:$HOME/bin/scripts:$HOME/Library/pnpm"
 else
   export PATH="/usr/local/bin:/usr/bin:/bin:$HOME/bin:$HOME/.local/bin:$HOME/bin/scripts:/usr/sbin:/usr/local/sbin"
 fi
@@ -272,3 +273,14 @@ fi
 
 precmd_functions=(${precmd_functions:#prompt_grml_precmd})
 prompt_starship_precmd
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/ekathuria/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/ekathuria/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/ekathuria/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/ekathuria/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"
+
