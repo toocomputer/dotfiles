@@ -10,5 +10,5 @@ prefix = "ctrl+s"
 split_vertical = "prefix+\\"            # tmux: bind '\' split-window -h (side-by-side)
 
 [ui]
-accent = "#af87ff"                      # tmux: pane-active-border-style fg=colour141
-window_title = "ee: {workspace}"
+accent = "#af87ff"
+window_title = "{workspace}"
