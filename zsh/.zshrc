@@ -111,6 +111,7 @@ alias globals="npm list -g --depth 0"
 alias gg="lazygit"
 alias gs="git status"
 alias hci="cd $HOME/MagProjects/HCI"
+alias herd=herdr
 alias ilua="v ~/.config/nvim/init.lua"
 alias kb="v $HOME/Library/Application\ Support/Code/User/keybindings.json"
 alias launch="cd; ~/projects/launch"
@@ -128,6 +129,7 @@ alias newvite="npm create vite@latest"
 if [[ "$(uname)" == "Darwin" ]]; then
   alias nvim="$HOME/bin/nvim-macos-arm64/bin/nvim"
 fi
+alias pn=pnpm
 alias projects="cd $HOME/Projects"
 alias prd="pnpm run deploy"
 alias raycast="cd ~/bin/raycast"
