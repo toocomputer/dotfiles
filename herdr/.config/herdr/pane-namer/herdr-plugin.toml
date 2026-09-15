@@ -1,0 +1,26 @@
+id = "custom.pane-namer"
+name = "Pane Namer"
+version = "0.1.0"
+min_herdr_version = "0.7.5"
+description = "Prompt for a pane name on split"
+platforms = ["linux", "macos"]
+
+[[actions]]
+id = "split-right-named"
+title = "Split right (named)"
+contexts = ["pane"]
+command = ["sh", "open-prompt.sh", "right"]
+
+[[actions]]
+id = "split-down-named"
+title = "Split down (named)"
+contexts = ["pane"]
+command = ["sh", "open-prompt.sh", "down"]
+
+[[panes]]
+id = "prompt"
+title = "New pane name"
+placement = "popup"
+width = 60
+height = 3
+command = ["sh", "prompt.sh"]

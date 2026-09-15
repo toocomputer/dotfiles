@@ -7,7 +7,15 @@ auto_switch = false
 [keys]
 prefix = "ctrl+s"
 
-split_vertical = "prefix+\\"            # tmux: bind '\' split-window -h (side-by-side)
+[[keys.command]]
+key = "prefix+minus"
+type = "plugin_action"
+command = "custom.pane-namer.split-down-named"
+
+[[keys.command]]
+key = "prefix+\\"
+type = "plugin_action"
+command = "custom.pane-namer.split-right-named"
 
 [ui]
 accent = "#af87ff"
