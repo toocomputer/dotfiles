@@ -1,7 +1,7 @@
 onboarding = false
 
 [theme]
-name = "catppuccin"
+name = "tokyo-night"
 auto_switch = false
 
 [keys]
@@ -18,5 +18,5 @@ type = "plugin_action"
 command = "custom.pane-namer.split-right-named"
 
 [ui]
-accent = "#af87ff"
+accent = "#b4befe"
 window_title = "{workspace}"
