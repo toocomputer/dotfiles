@@ -244,7 +244,7 @@ fi
 source  <(fzf --zsh)
 
 if [[ "$VSCODE_PROFILE" == "web" ]]; then
-  export STARSHIP_CONFIG="$HOME/.config/starship-web.toml"
+  export STARSHIP_CONFIG="$HOME/.config/starship.toml"
 elif [[ "$VSCODE_PROFILE" == "python" ]]; then
   export STARSHIP_CONFIG="$HOME/.config/starship-python.toml"
 else
