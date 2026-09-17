@@ -43,7 +43,7 @@ Ubuntu = "󰕈"
 SUSE = ""
 Raspbian = "󰐿"
 Mint = "󰣭"
-Macos = ""
+Macos = "󰀶"
 Manjaro = ""
 Linux = "󰌽"
 Gentoo = "󰣨"
@@ -63,7 +63,7 @@ RedHatEnterprise = "󱄛"
 show_always = true
 style_user = "bg:red fg:crust"
 style_root = "bg:red fg:crust"
-format = '[ ee ]($style)'
+format = '[ 󰬰󰬰 ]($style)'
 
 [directory]
 style = "bg:peach fg:crust"
