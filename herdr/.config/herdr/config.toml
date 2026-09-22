@@ -1,11 +1,13 @@
 onboarding = false
 
 [theme]
-name = "tokyo-night"
+name = "catppuccin"
 auto_switch = false
 
 [keys]
 prefix = "ctrl+s"
+move_tab_previous = "prefix+shift+h"
+move_tab_next = "prefix+shift+l"
 
 [[keys.command]]
 key = "prefix+minus"
