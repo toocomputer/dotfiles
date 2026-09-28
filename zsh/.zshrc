@@ -60,10 +60,9 @@ COMPLETION_WAITING_DOTS="true"
 #  git z zsh-syntax-highlighting macos
 # )
 
-# Incompatible with Warp
-#plugins=(
-#  z zsh-syntax-highlighting macos
-#)
+plugins=(
+ zsh-syntax-highlighting macos zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
